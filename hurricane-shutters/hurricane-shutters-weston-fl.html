@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Weston, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #DC143C;
+        }
+        
+        .header-phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #DC143C 0%, #a00f2d 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #DC143C;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: #DC143C;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+        
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: #DC143C;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-banner h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            color: #DC143C;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-card h3 {
+            font-size: 28px;
+            color: #DC143C;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 a {
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .benefits {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .benefits h4 {
+            color: #DC143C;
+            margin-bottom: 10px;
+        }
+        
+        .benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .benefits li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #DC143C;
+            font-weight: bold;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #DC143C 0%, #a00f2d 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .header-phone {
+                font-size: 18px;
+            }
+            
+            .logo {
+                font-size: 22px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .product-card h3 {
+                font-size: 24px;
+            }
+            
+            .final-cta h2 {
+                font-size: 32px;
+            }
+            
+            .cta-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Weston, FL</h1>
+            <p>Protect Your Home with Florida's Leading Hurricane Protection Experts</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based in the heart of Florida, we understand the unique challenges that homeowners face during hurricane season, and we're committed to providing Weston residents with the most reliable and effective storm protection solutions available. Our expert team combines decades of experience with cutting-edge manufacturing techniques to deliver products that not only meet but exceed industry standards for hurricane protection.</p>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+
+            <!-- Accordion Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                <p>Accordion hurricane shutters represent one of the most popular and practical choices for Weston homeowners seeking reliable storm protection. These shutters feature a unique folding design that allows them to be easily deployed when a storm approaches and neatly stored when not in use.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Easy deployment without professional assistance</li>
+                        <li>Heavy-duty aluminum construction for exceptional impact resistance</li>
+                        <li>Permanent installation - no storage needed</li>
+                        <li>Energy cost savings through extra insulation</li>
+                        <li>Enhanced home security year-round</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rolling Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                <p>Aluminum rolling shutters offer the ultimate in convenience and protection for discerning Weston homeowners. These premium shutters operate with the simple push of a button, rolling up and down smoothly within their housing units mounted above windows and doors.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Motorized operation for effortless control</li>
+                        <li>Ideal for multi-story homes</li>
+                        <li>Superior storm protection with robust construction</li>
+                        <li>Virtually invisible when retracted</li>
+                        <li>Year-round privacy and light control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bahama Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                <p>Bahama shutters bring a distinctive tropical aesthetic to Weston homes while delivering reliable hurricane protection. These shutters are hinged at the top and propped open at an angle, creating an attractive awning effect that adds character and charm to any architectural style.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Tropical aesthetic enhances curb appeal</li>
+                        <li>Natural light filtering with shade and privacy</li>
+                        <li>Quick deployment for storm protection</li>
+                        <li>Reduces cooling costs by blocking direct sunlight</li>
+                        <li>Available in multiple colors and finishes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Colonial Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                <p>Colonial shutters offer timeless elegance combined with practical storm protection, making them perfect for Weston homes with traditional or colonial architectural styles. These classic shutters feature a traditional divided-panel design that adds sophisticated charm to any home's exterior.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Timeless, elegant design</li>
+                        <li>Enhances curb appeal and property value</li>
+                        <li>Reliable protection during hurricane season</li>
+                        <li>Sturdy construction for long-lasting performance</li>
+                        <li>Customizable colors and panel configurations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next</h2>
+            <p>Don't wait until the next hurricane warning to protect your Weston home and family. Take action today by scheduling a complimentary in-home consultation where we'll assess your property, discuss your protection requirements, and provide a detailed estimate tailored to your home.</p>
+            <div class="cta-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Online Visit</a>
+                <a href="tel:8886859680" class="cta-button secondary">Call (888) 685-9680</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 18px;">With Storm Smart's hurricane shutters, you can face the next storm season with confidence, knowing your home is protected by the best hurricane protection products Florida has to offer.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Experts.</p>
+        </div>
+    </footer>
+</body>
+</html>

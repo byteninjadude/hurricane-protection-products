@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Clearwater Beach, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #c8102e;
+        }
+
+        .header-phone {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c8102e;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #c8102e 0%, #a00d26 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #c8102e;
+        }
+
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: #c8102e;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: #a00d26;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Introduction Section */
+        .intro {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-box {
+            background: white;
+            border: 3px solid #c8102e;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .cta-box h3 {
+            color: #c8102e;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Product Sections */
+        .products {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #c8102e;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-card h3 {
+            color: #c8102e;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 a {
+            color: #c8102e;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .product-card h3 a:hover {
+            border-bottom: 2px solid #c8102e;
+        }
+
+        .product-card p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #c8102e 0%, #a00d26 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .contact-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .header-phone {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .product-card h3 {
+                font-size: 24px;
+            }
+
+            .final-cta h2 {
+                font-size: 32px;
+            }
+
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Benefits List */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .benefit-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #c8102e;
+        }
+
+        .benefit-item h4 {
+            color: #c8102e;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Clearwater Beach, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection Systems</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn btn-primary">Schedule Free In-Home Visit</a>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <p>Storm Smart is a leading Florida-based manufacturer and installer specializing in comprehensive hurricane protection solutions for homeowners and businesses throughout the state. We design, manufacture, and install premium hurricane screens, shutters, impact-resistant doors, and storm windows to safeguard properties from severe weather conditions. Serving communities across Florida, including Clearwater Beach and the greater Tampa Bay area, Storm Smart has built a reputation for delivering reliable, durable hurricane protection systems that give property owners peace of mind during storm season.</p>
+            
+            <div class="cta-box">
+                <h3>Ready to Protect Your Property?</h3>
+                <p>Visit our aluminum shutters page to explore our complete product line and schedule a complimentary consultation with one of our experienced representatives.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn btn-secondary">View Our Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+
+            <!-- Accordion Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                <p>Accordion hurricane shutters offer the perfect combination of convenience and robust protection for Clearwater Beach residents. These permanently mounted shutters fold neatly against your home's exterior when not in use, maintaining your property's aesthetic appeal while remaining instantly accessible when storms threaten. Constructed from heavy-duty aluminum, accordion shutters provide excellent wind resistance and impact protection, meeting or exceeding Florida's strict building codes. Their user-friendly design allows homeowners to quickly deploy protection across windows and doors without requiring additional storage space or complex installation procedures during emergency preparations.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <!-- Rolling Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                <p>Aluminum rolling shutters represent the pinnacle of hurricane protection technology, offering motorized convenience at the touch of a button. These premium shutters roll up into a compact housing unit above your windows and doors, remaining completely hidden when retracted. When activated, they provide superior protection against high winds, flying debris, and forced entry attempts. Many Clearwater Beach homeowners appreciate the added benefits of enhanced privacy, noise reduction, and energy efficiency that rolling shutters provide year-round. Available in both manual and motorized configurations, these shutters can be integrated with smart home systems for ultimate convenience and security.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <!-- Bahama Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                <p>Bahama shutters bring tropical elegance to hurricane protection, making them an ideal choice for Clearwater Beach's coastal aesthetic. These hinged shutters mount above windows and doors, providing continuous shade and architectural charm while standing ready for storm deployment. When hurricane conditions approach, Bahama shutters quickly fold down and secure in place, offering reliable protection without compromising your home's visual appeal. Beyond storm protection, these shutters help reduce cooling costs by blocking direct sunlight, provide enhanced privacy, and add distinctive curb appeal that complements Florida's relaxed coastal lifestyle.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <!-- Colonial Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                <p>Colonial shutters combine timeless architectural beauty with modern hurricane protection technology, perfect for homeowners who value both style and safety. These traditional-looking shutters feature a classic panel design that enhances your property's curb appeal while providing dependable storm protection. Unlike decorative shutters, Storm Smart's colonial shutters are fully functional, engineered to withstand hurricane-force winds and impact from windborne debris. Available in various colors and configurations, colonial shutters seamlessly integrate with different architectural styles while ensuring your Clearwater Beach home remains protected and beautiful throughout the year.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next</h2>
+            <p>Don't wait for the next hurricane season to protect your Clearwater Beach investment. Take action today by exploring our full range of hurricane protection solutions and learning more about which system best fits your needs and budget. Schedule your complimentary in-home consultation where our experienced representatives will assess your property, discuss your protection goals, and provide a detailed proposal tailored to your specific requirements. With Storm Smart's expert installation and industry-leading products, you can face hurricane season with confidence, knowing your home and family are protected by Florida's most trusted hurricane protection specialists.</p>
+            
+            <div class="contact-options">
+                <a href="tel:8886859680" class="btn btn-primary">📞 Call (888) 685-9680</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn btn-secondary">Schedule Online Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Storm Smart. Florida's Leading Hurricane Protection Specialists.</p>
+            <p>Serving Clearwater Beach and all of Florida</p>
+        </div>
+    </footer>
+</body>
+</html>

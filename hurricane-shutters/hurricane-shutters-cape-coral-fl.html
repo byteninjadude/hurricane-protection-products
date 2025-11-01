@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Cape Coral, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .header-phone {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.3s;
+        }
+        
+        .header-phone:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button-red {
+            background: #c41e3a;
+            color: white;
+        }
+        
+        .cta-button-red:hover {
+            background: #8b1428;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        
+        .products-section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #c41e3a;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #c41e3a;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-card h3 {
+            color: #c41e3a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .product-card h3 a {
+            color: #c41e3a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .product-card h3 a:hover {
+            color: #8b1428;
+        }
+        
+        .product-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .product-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .product-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1428 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .header-phone {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Cape Coral, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's leading manufacturer and installer of premium hurricane protection products, specializing in screens, shutters, doors, and windows that safeguard homes and businesses throughout Southwest Florida, including Cape Coral. With decades of experience in storm protection, we understand the unique challenges that Cape Coral residents face during hurricane season and provide reliable, expertly-installed solutions designed to withstand Florida's most severe weather conditions.</p>
+            <div style="text-align: center;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red">Explore Our Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The most popular and cost-effective storm protection solution for Cape Coral homeowners.</p>
+                    <ul>
+                        <li>Quick deployment when storms approach</li>
+                        <li>Folds neatly when not in use</li>
+                        <li>Heavy-duty aluminum construction</li>
+                        <li>Meets Florida Building Code requirements</li>
+                        <li>No storage needed</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button cta-button-red" style="font-size: 16px; padding: 12px 30px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The ultimate in convenience and security - motorized protection at the push of a button.</p>
+                    <ul>
+                        <li>Motorized deployment</li>
+                        <li>Enhanced security year-round</li>
+                        <li>Energy efficiency benefits</li>
+                        <li>Noise reduction</li>
+                        <li>Sleek, modern design</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button cta-button-red" style="font-size: 16px; padding: 12px 30px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Combine effective storm protection with distinctive tropical styling perfect for coastal living.</p>
+                    <ul>
+                        <li>Blocks harsh sunlight daily</li>
+                        <li>Reduces cooling costs</li>
+                        <li>Maintains visibility and ventilation</li>
+                        <li>Quick storm deployment</li>
+                        <li>Multiple color options</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button cta-button-red" style="font-size: 16px; padding: 12px 30px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>The perfect blend of traditional charm and modern storm protection technology.</p>
+                    <ul>
+                        <li>Enhances curb appeal</li>
+                        <li>Classic, elegant design</li>
+                        <li>Meets Florida wind load requirements</li>
+                        <li>Customizable colors and hardware</li>
+                        <li>Functional and decorative</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button cta-button-red" style="font-size: 16px; padding: 12px 30px;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your Cape Coral home and family. Take action today and schedule your complimentary in-home consultation. Our experienced representatives will assess your property, discuss your specific needs and budget, and provide a detailed quote for the hurricane protection solution that's right for your Cape Coral home.</p>
+            
+            <div class="cta-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Storm Smart. Florida's Leading Hurricane Protection Experts.</p>
+        </div>
+    </footer>
+</body>
+</html>

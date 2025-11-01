@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Palm Beach Gardens, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #DC143C;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #DC143C;
+            text-decoration: none;
+        }
+
+        .header-phone:hover {
+            color: #B01030;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #DC143C 0%, #B01030 100%);
+            color: white;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #DC143C;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-red {
+            background: #DC143C;
+            color: white;
+        }
+
+        .cta-button-red:hover {
+            background: #B01030;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f8f9fa;
+            padding: 4rem 20px;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #DC143C;
+            margin-bottom: 3rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            color: #DC143C;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 a {
+            color: #DC143C;
+            text-decoration: none;
+        }
+
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .product-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #DC143C;
+            font-weight: bold;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #DC143C 0%, #B01030 100%);
+            color: white;
+            padding: 3rem 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* What's Next Section */
+        .whats-next {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .whats-next h2 {
+            color: #DC143C;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .whats-next p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+
+        .contact-card h3 {
+            color: #DC143C;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .phone-large {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #DC143C;
+            text-decoration: none;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .phone-large:hover {
+            color: #B01030;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">⚡ Storm Smart</div>
+            <a href="tel:8886859680" class="header-phone">
+                📞 (888) 685-9680
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Palm Beach Gardens, FL</h1>
+            <p>Protect Your Home with Florida's Leading Hurricane Protection Experts</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Your Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <p>
+            Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality storm screens, shutters, impact doors, and hurricane windows. Based right here in the Sunshine State, we understand the unique challenges that Florida residents face during hurricane season and provide comprehensive storm protection solutions throughout Palm Beach Gardens and the surrounding areas. Our locally-based team combines decades of experience with cutting-edge manufacturing techniques to deliver superior hurricane protection products that keep your family and property safe when severe weather strikes.
+        </p>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to Protect Your Home?</h2>
+        <p>Schedule your complimentary consultation today</p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="products-container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <!-- Accordion Shutters -->
+                <div class="product-card">
+                    <div class="product-icon">🪟</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <ul>
+                        <li>Easy fold-back design</li>
+                        <li>Impenetrable storm protection</li>
+                        <li>Year-round security</li>
+                        <li>Corrosion-resistant aluminum</li>
+                        <li>Low maintenance required</li>
+                        <li>Preserves home aesthetics</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+
+                <!-- Rolling Shutters -->
+                <div class="product-card">
+                    <div class="product-icon">🔄</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <ul>
+                        <li>Motorized push-button operation</li>
+                        <li>Secure entire home in minutes</li>
+                        <li>Energy-efficient insulation</li>
+                        <li>Complete blackout capabilities</li>
+                        <li>Sleek integrated design</li>
+                        <li>Premium convenience</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+
+                <!-- Bahama Shutters -->
+                <div class="product-card">
+                    <div class="product-icon">🌴</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <ul>
+                        <li>Tropical Caribbean charm</li>
+                        <li>Adjustable shade & ventilation</li>
+                        <li>Enhanced curb appeal</li>
+                        <li>Reduces cooling costs</li>
+                        <li>Always ready for deployment</li>
+                        <li>Multiple color options</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+
+                <!-- Colonial Shutters -->
+                <div class="product-card">
+                    <div class="product-icon">🏛️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <ul>
+                        <li>Classic architectural elegance</li>
+                        <li>Side-hinged design</li>
+                        <li>Modern storm protection</li>
+                        <li>Customizable colors & hardware</li>
+                        <li>Privacy & light control</li>
+                        <li>Durable aluminum construction</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red" style="font-size: 1.2rem; padding: 1.2rem 3rem;">View All Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Next Section -->
+    <section class="whats-next">
+        <h2>What's Next</h2>
+        <p>
+            Don't wait until the next hurricane warning to protect your Palm Beach Gardens home. Our experienced team is ready to provide you with a complimentary in-home consultation where we'll assess your property's specific needs and provide personalized recommendations.
+        </p>
+        
+        <div class="contact-options">
+            <div class="contact-card">
+                <h3>📞 Call Us Now</h3>
+                <p>Speak with a hurricane protection specialist</p>
+                <a href="tel:8886859680" class="phone-large">(888) 685-9680</a>
+            </div>
+            
+            <div class="contact-card">
+                <h3>📝 Schedule Online</h3>
+                <p>Fill out our simple form for a free consultation</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red" style="margin-top: 1rem;">Schedule Your Visit</a>
+            </div>
+        </div>
+
+        <p style="margin-top: 3rem; font-size: 1.1rem;">
+            Take the first step toward comprehensive storm protection and safeguard your home, your family, and your peace of mind with Storm Smart's industry-leading hurricane shutters.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Storm Smart. Florida's Trusted Hurricane Protection Experts.</p>
+        <p style="margin-top: 0.5rem;">Serving Palm Beach Gardens and all of Florida</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Fort Myers, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #dc2626;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button-secondary {
+            background: transparent;
+            border: 3px solid white;
+            color: white;
+        }
+        
+        .cta-button-secondary:hover {
+            background: white;
+            color: #dc2626;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .about-content strong {
+            color: #dc2626;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: #f9fafb;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid #dc2626;
+            border-bottom: 4px solid #dc2626;
+        }
+        
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #dc2626;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #dc2626;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid #f3f4f6;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.15);
+            border-color: #dc2626;
+        }
+        
+        .product-card h3 {
+            color: #dc2626;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-card h3 a {
+            color: #dc2626;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .product-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .phone {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 20px 0;
+            display: block;
+        }
+        
+        .phone a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 3px solid white;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+            }
+            
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+            
+            .phone {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Trust Indicators */
+        .trust-bar {
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        .trust-bar strong {
+            color: #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Fort Myers, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View Our Shutters</a>
+            <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <strong>Florida's Leading Hurricane Protection Experts</strong> | Licensed & Insured | Free In-Home Consultations
+    </div>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <p>
+                    <strong>Storm Smart</strong> is Florida's leading manufacturer and installer of premium hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard homes and businesses throughout the Fort Myers area and beyond. With years of experience serving the unique needs of Florida residents, we understand the importance of reliable storm protection that combines superior strength, durability, and aesthetic appeal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation Today</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <!-- Accordion Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" target="_blank">Accordion Hurricane Shutters</a></h3>
+                    <p>The most popular and practical storm protection solution for Fort Myers homeowners.</p>
+                    <ul>
+                        <li>Easy single-handed operation</li>
+                        <li>Deploy in minutes</li>
+                        <li>Permanent installation - no storage needed</li>
+                        <li>Durable aluminum construction</li>
+                        <li>Corrosion-resistant finish</li>
+                        <li>Maintains curb appeal</li>
+                    </ul>
+                </div>
+
+                <!-- Rolling Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" target="_blank">Aluminum Rolling Shutters</a></h3>
+                    <p>Premium motorized protection at the touch of a button.</p>
+                    <ul>
+                        <li>Motorized convenience</li>
+                        <li>Discreet compact housing</li>
+                        <li>Enhanced security & privacy</li>
+                        <li>Energy efficiency benefits</li>
+                        <li>Noise reduction</li>
+                        <li>Manual backup available</li>
+                    </ul>
+                </div>
+
+                <!-- Bahama Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" target="_blank">Bahama Shutters</a></h3>
+                    <p>Tropical aesthetic meets exceptional hurricane protection.</p>
+                    <ul>
+                        <li>Distinctive island styling</li>
+                        <li>Permanently installed</li>
+                        <li>Excellent ventilation</li>
+                        <li>Quick storm deployment</li>
+                        <li>Privacy control</li>
+                        <li>Enhances curb appeal</li>
+                    </ul>
+                </div>
+
+                <!-- Colonial Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" target="_blank">Colonial Shutters</a></h3>
+                    <p>Timeless elegance with robust storm protection.</p>
+                    <ul>
+                        <li>Classic traditional design</li>
+                        <li>Side-hinged operation</li>
+                        <li>Increases property value</li>
+                        <li>Custom color options</li>
+                        <li>Easy maintenance</li>
+                        <li>Privacy & light control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore All Hurricane Shutter Options</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>
+                Don't wait until the next hurricane warning to protect your Fort Myers home. Take action now to ensure your family's safety and your property's protection with Storm Smart's premium aluminum hurricane shutters.
+            </p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Visit</a>
+            <div class="phone">
+                Or Call <a href="tel:8886859680">(888) 685-9680</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.1rem;">
+                Our experienced representatives will assess your specific needs, provide expert recommendations, and deliver a customized quote for your hurricane protection solution.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Boca Raton, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        .header {
+            background: #C41E3A;
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .phone {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .phone:hover {
+            background: white;
+            color: #C41E3A;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C41E3A;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+            text-align: center;
+        }
+        
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+        
+        /* Products Section */
+        .products {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #C41E3A;
+            margin-bottom: 50px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(196,30,58,0.2);
+        }
+        
+        .product-card h3 {
+            color: #C41E3A;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .product-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .product-link {
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .product-link:hover {
+            color: #8B1528;
+            text-decoration: underline;
+        }
+        
+        .product-link::after {
+            content: ' →';
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: #C41E3A;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .cta-banner h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-banner p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            color: #C41E3A;
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .cta-secondary {
+            background: #C41E3A;
+            color: white;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-secondary:hover {
+            background: #8B1528;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Storm Smart</div>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Hurricane Shutters in Boca Raton, FL</h1>
+        <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Consultation</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your property against severe weather. Based in the heart of hurricane country, we understand the unique challenges Florida residents face during storm season and provide comprehensive protection solutions throughout Boca Raton, Ave Maria, and the surrounding South Florida region. With decades of experience and thousands of satisfied customers, we're committed to keeping your family and property safe when storms threaten.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <!-- Accordion Shutters -->
+                <div class="product-card">
+                    <h3>Accordion Hurricane Shutters</h3>
+                    <p>Convenient and secure protection that folds neatly when not in use. Heavy-duty aluminum construction with track-based system for smooth, one-person operation. Perfect for sliding glass doors and large windows.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More</a>
+                </div>
+
+                <!-- Rolling Shutters -->
+                <div class="product-card">
+                    <h3>Aluminum Rolling Shutters</h3>
+                    <p>The ultimate in convenience with motorized operation at the push of a button. Rolls into compact housing when retracted, providing maximum protection and energy savings year-round.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More</a>
+                </div>
+
+                <!-- Bahama Shutters -->
+                <div class="product-card">
+                    <h3>Bahama Shutters</h3>
+                    <p>Tropical styling meets reliable storm protection. Top-hinged design provides shade, privacy, and ventilation while enhancing your home's coastal aesthetic. Quickly deployed when storms approach.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More</a>
+                </div>
+
+                <!-- Colonial Shutters -->
+                <div class="product-card">
+                    <h3>Colonial Shutters</h3>
+                    <p>Timeless elegance with modern protection. Side-hinged shutters feature classic raised panel designs that complement any architecture. Durable aluminum construction with powder-coated finishes for lasting beauty.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/" class="product-link">Learn More</a>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View All Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Don't Wait for the Next Hurricane Warning</h2>
+        <p>Protect your home and family today with professional hurricane shutters from Storm Smart</p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Your Free Consultation Now</a>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next</h2>
+            <p>Don't wait for the next hurricane warning to protect your Boca Raton home. Take action today and schedule your free in-home consultation with Storm Smart. Our experienced representatives will assess your property's specific needs and help you choose the perfect hurricane protection system for your home and budget.</p>
+            <p><strong>Your family's safety and your property's protection are just one consultation away.</strong></p>
+            
+            <div class="contact-options">
+                <a href="tel:8886859680" class="cta-secondary">Call (888) 685-9680</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-secondary">Schedule Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Storm Smart. Protecting Florida Homes Since 1992.</p>
+        <p>Serving Boca Raton, Ave Maria, and all of South Florida</p>
+    </footer>
+</body>
+</html>

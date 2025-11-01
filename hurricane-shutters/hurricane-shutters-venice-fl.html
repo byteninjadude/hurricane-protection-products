@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Venice, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .cta-button.secondary:hover {
+            background: white;
+            color: #c41e3a;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-bar {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid #c41e3a;
+            border-bottom: 4px solid #c41e3a;
+        }
+        
+        .products-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+            color: #c41e3a;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #c41e3a;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(196,30,58,0.2);
+        }
+        
+        .product-card h3 {
+            color: #c41e3a;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 a {
+            color: #c41e3a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .product-card h3 a:hover {
+            color: #8b1429;
+        }
+        
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .product-link {
+            color: #c41e3a;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-link:hover {
+            color: #8b1429;
+            transform: translateX(5px);
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .phone-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .phone-number a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-number {
+                font-size: 24px;
+            }
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">STORM SMART</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Venice, FL</h1>
+            <p>Trusted hurricane protection for Venice and Florida’s Gulf Coast</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Shutters</a>
+            <a href="tel:8886859680" class="cta-button secondary">Call (888) 685-9680</a>
+        </div>
+    </section>
+    
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's trusted leader in hurricane protection, specializing in the manufacturing and installation of premium hurricane screens, shutters, doors, and windows. For over two decades, we have been protecting homes and businesses throughout the Sunshine State, including the beautiful coastal community of Venice, FL, where hurricane preparedness is not just recommended, it is essential for safeguarding your property and loved ones.</p>
+        </div>
+    </section>
+    
+    <section class="cta-bar">
+        <div class="container">
+            <h2 style="margin-bottom: 20px; color: #c41e3a;">Ready to protect your Venice home?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Visit our aluminum shutters page to explore our full range of hurricane protection products and schedule a complimentary in-home consultation</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Started Now</a>
+        </div>
+    </section>
+    
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>Accordion hurricane shutters offer unparalleled convenience and protection for Venice homeowners. These permanently mounted shutters fold neatly to the sides of your windows when not in use, maintaining your home's aesthetic appeal while providing quick deployment when storms approach.</p>
+                    <ul class="benefits-list">
+                        <li>Heavy-duty aluminum construction</li>
+                        <li>Meets Florida Building Code requirements</li>
+                        <li>Track-and-wheel system for smooth operation</li>
+                        <li>One person can secure large openings fast</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>For the ultimate in convenience and year-round functionality, aluminum rolling shutters represent the premium choice for Venice property owners. These motorized shutters roll up into a compact housing above your windows, virtually invisible when not deployed.</p>
+                    <ul class="benefits-list">
+                        <li>Push-button or manual operation</li>
+                        <li>Instant hurricane, security, and sun protection</li>
+                        <li>Powder-coated aluminum resists salt-air corrosion</li>
+                        <li>Noise reduction and energy efficiency benefits</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bahama shutters combine effective hurricane protection with distinctive Caribbean-inspired style, making them a popular choice for Venice's coastal architecture. These hinged shutters mount above windows and swing down to provide complete coverage during storms.</p>
+                    <ul class="benefits-list">
+                        <li>Excellent shade and privacy control</li>
+                        <li>Allows ventilation and natural light</li>
+                        <li>Multiple colors and finishes to match your home</li>
+                        <li>Storm-ready when closed and secured</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Colonial shutters bring timeless elegance to hurricane protection, perfectly complementing Venice's diverse architectural styles. These side-mounted shutters swing closed and lock in the middle to create a strong protective barrier.</p>
+                    <ul class="benefits-list">
+                        <li>Premium aluminum with authentic louver detailing</li>
+                        <li>Enhances curb appeal all year long</li>
+                        <li>Reliable storm protection when closed</li>
+                        <li>Ideal for historic and coastal-style homes</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait for the next hurricane season to protect your Venice home and family. Visit Storm Smart's aluminum shutters page today to learn more about our comprehensive hurricane protection solutions and schedule your free in-home consultation.</p>
+            <div class="phone-number">
+                <a href="tel:8886859680">📞 (888) 685-9680</a>
+            </div>
+            <p style="margin: 30px 0;">Our certified representatives will assess your property's unique needs and provide expert recommendations tailored to your budget and aesthetic preferences.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Storm Smart. Florida's Leading Hurricane Protection Specialist.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Lake Worth Beach, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #C41E3A;
+        }
+
+        .header-phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #C41E3A;
+            text-decoration: none;
+        }
+
+        .header-phone:hover {
+            color: #A01628;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Buttons */
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C41E3A;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: white;
+            color: #C41E3A;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* CTA Bar */
+        .cta-bar {
+            background: #C41E3A;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .cta-bar h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Product Sections */
+        .products {
+            padding: 80px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(196,30,58,0.2);
+        }
+
+        .product-card h3 {
+            color: #C41E3A;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 a {
+            color: #C41E3A;
+            text-decoration: none;
+        }
+
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .product-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C41E3A;
+            font-weight: bold;
+        }
+
+        .product-link {
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        /* What's Next Section */
+        .whats-next {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .whats-next h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .whats-next p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .header-phone {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whats-next h2 {
+                font-size: 32px;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            color: #C41E3A;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">☎ (888) 685-9680</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Lake Worth Beach, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <div>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard homes and businesses throughout the state. With deep roots in Florida and extensive experience in storm protection, we understand the unique challenges that Lake Worth Beach residents face during hurricane season, and we're committed to providing reliable, durable solutions that offer peace of mind when severe weather threatens.</p>
+        </div>
+    </section>
+
+    <!-- CTA Bar -->
+    <section class="cta-bar">
+        <div class="container">
+            <h2>Ready to Protect Your Lake Worth Beach Home?</h2>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            <p class="section-subtitle">Choose from our comprehensive range of hurricane protection systems, each designed to meet Florida Building Code requirements while enhancing your home's appearance.</p>
+            
+            <div class="product-grid">
+                <!-- Accordion Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect blend of convenience and protection. These permanently mounted shutters fold neatly when not in use and deploy in minutes.</p>
+                    <ul>
+                        <li>Quick and easy deployment</li>
+                        <li>No storage required</li>
+                        <li>High-grade aluminum construction</li>
+                        <li>Ideal for elderly residents</li>
+                        <li>Meets all Florida Building Code requirements</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <!-- Rolling Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The ultimate in convenience with motorized, push-button operation. Deploy your storm protection without any physical effort.</p>
+                    <ul>
+                        <li>Motorized push-button operation</li>
+                        <li>Year-round security benefits</li>
+                        <li>Energy efficient insulation</li>
+                        <li>Enhanced privacy and security</li>
+                        <li>Compact, discreet design</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <!-- Bahama Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Tropical elegance meets robust protection. These decorative shutters enhance curb appeal while providing excellent shade and storm defense.</p>
+                    <ul>
+                        <li>Attractive architectural elements</li>
+                        <li>Provides shade and reduces cooling costs</li>
+                        <li>Quick storm deployment</li>
+                        <li>Available in multiple colors</li>
+                        <li>Enhanced privacy</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <!-- Colonial Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Timeless beauty with serious storm protection. Perfect for traditional and historic homes seeking classic aesthetics with modern safety.</p>
+                    <ul>
+                        <li>Classic, symmetrical appearance</li>
+                        <li>Enhances property value</li>
+                        <li>Hinged for easy operation</li>
+                        <li>Available in numerous colors</li>
+                        <li>Durable aluminum construction</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Next Section -->
+    <section class="whats-next">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your Lake Worth Beach home and family. Take action today and schedule your complimentary in-home consultation. Our experienced representatives will assess your property's unique needs, provide detailed product information, and help you choose the perfect hurricane protection system for your home.</p>
+            <div class="contact-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 18px;">With Storm Smart's professional installation and industry-leading warranty, you can face hurricane season with confidence.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Specialists.</p>
+            <p style="margin-top: 10px;">Serving Lake Worth Beach and all of Florida</p>
+        </div>
+    </footer>
+</body>
+</html>

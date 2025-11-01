@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Ruskin, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #c41e3a;
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #c41e3a;
+            text-decoration: none;
+        }
+
+        .phone:hover {
+            color: #a01828;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1529 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: #c41e3a;
+            color: white;
+            border: 2px solid #c41e3a;
+        }
+
+        .cta-button-secondary:hover {
+            background: #a01828;
+            border-color: #a01828;
+        }
+
+        .intro {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .cta-section {
+            background: #f8f8f8;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #c41e3a;
+            border-bottom: 3px solid #c41e3a;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .product-card {
+            background: white;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-header {
+            background: #c41e3a;
+            color: white;
+            padding: 1.5rem 2rem;
+        }
+
+        .product-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .product-header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .product-header a:hover {
+            text-decoration: underline;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1529 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .phone {
+                font-size: 1.1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .product-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Ruskin, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <p>Storm Smart is Florida's trusted manufacturer and installer of premium hurricane protection products, specializing in screens, shutters, doors, and windows designed to safeguard homes and businesses throughout the state. With decades of experience serving communities across Florida, we provide comprehensive storm protection solutions specifically tailored to withstand the unique weather challenges faced by Ruskin residents and surrounding areas in Hillsborough County.</p>
+    </section>
+
+    <section class="cta-section">
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>Ready to protect your home?</strong></p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-secondary">Get Your Free Estimate</a>
+    </section>
+
+    <section class="products">
+        <div class="product-card">
+            <div class="product-header">
+                <h2><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h2>
+            </div>
+            <div class="product-content">
+                <p>Accordion hurricane shutters represent one of the most popular and practical storm protection solutions for Ruskin homeowners. These permanently mounted shutters fold neatly against your home's exterior when not in use, maintaining your property's aesthetic appeal while providing instant access to storm protection. Constructed from heavy-duty aluminum, accordion shutters deploy quickly along a top and bottom track system, allowing you to secure your entire home in minutes. Their interlocking design creates an incredibly strong barrier against hurricane-force winds, flying debris, and driving rain, while also providing year-round benefits including enhanced security, noise reduction, and energy savings through improved insulation.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <h2><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h2>
+            </div>
+            <div class="product-content">
+                <p>Aluminum rolling shutters offer the ultimate in convenience and protection for discerning Ruskin property owners. These premium shutters operate with the simple flip of a switch, rolling up and down from a compact housing unit mounted above your windows and doors. Available in both manual crank and motorized versions, rolling shutters provide seamless integration with your home's architecture while delivering maximum storm protection when needed. Beyond hurricane season, these versatile shutters serve multiple purposes including burglar deterrence, privacy enhancement, and significant energy cost reduction by blocking heat gain during Florida's intense summer months.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <h2><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h2>
+            </div>
+            <div class="product-content">
+                <p>Bahama shutters bring distinctive Caribbean-inspired style to your Ruskin home while providing reliable hurricane protection and everyday functionality. These attractive shutters mount at an angle above your windows, creating elegant architectural detail that enhances your home's curb appeal year-round. During storm season, Bahama shutters quickly swing down to create a secure barrier against high winds and debris. The angled design also provides excellent shade and ventilation control throughout Florida's warm climate, helping reduce cooling costs while adding character to your home's exterior. Available in a variety of colors and styles, Bahama shutters seamlessly blend form and function.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <h2>Colonial Shutters</h2>
+            </div>
+            <div class="product-content">
+                <p>Colonial shutters offer timeless elegance combined with modern hurricane protection technology for Ruskin homes with traditional or colonial architectural styles. These shutters feature the classic louvered appearance of historical shutters while incorporating contemporary engineering and materials for superior storm resistance. Colonial shutters can be designed as decorative side-mount panels that swing closed during storms, or as fully functional accordion-style systems that maintain the traditional colonial appearance. The versatile design options allow homeowners to achieve authentic colonial aesthetics while meeting modern building codes and insurance requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>What's Next</h2>
+            <p>Don't wait for the next hurricane season to protect your most valuable investment. Our experienced team is ready to provide you with a comprehensive consultation and free estimate.</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule In-Home Visit</a>
+                <a href="tel:8886859680" class="cta-button">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Provider.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Immokalee, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #CC0000 0%, #8B0000 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #CC0000;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: #CC0000;
+        }
+
+        .phone {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro {
+            padding: 60px 20px;
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .products {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #CC0000;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #CC0000;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(204,0,0,0.2);
+        }
+
+        .product-card h3 {
+            color: #CC0000;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 a {
+            color: #CC0000;
+            text-decoration: none;
+        }
+
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #CC0000, #8B0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #8B0000 0%, #CC0000 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item h4 {
+            color: #CC0000;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .phone {
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Immokalee, FL</h1>
+            <h2 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 400;">Protect Your Home with Storm Smart</h2>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+            <div style="margin-top: 30px;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free In-Home Visit</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button secondary">View All Products</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based right here in Florida, we understand the unique challenges that Immokalee residents face during hurricane season, and we're committed to providing reliable, durable protection solutions that keep your family and property safe when storms threaten Southwest Florida.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Storm Smart?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <h4>Maximum Protection</h4>
+                    <p>Industry-leading hurricane shutters engineered to withstand Category 5 storms</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Fast Installation</h4>
+                    <p>Professional installation by experienced technicians who know Florida weather</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Great Value</h4>
+                    <p>Competitive pricing with financing options available for qualified buyers</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <h4>Local Expertise</h4>
+                    <p>Florida-based company with decades of experience protecting homes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">🪟</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect combination of convenience and robust protection. These shutters fold neatly to the sides when not in use and deploy in minutes when storms approach. Heavy-duty aluminum construction provides impenetrable protection against flying debris and high winds.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button" style="font-size: 0.9rem; padding: 12px 25px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">⬇️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>Ultimate storm protection with everyday functionality. Roll up into compact housing when not needed. Available in manual or motorized options for one-button security. Provides year-round benefits including noise reduction and energy efficiency.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button" style="font-size: 0.9rem; padding: 12px 25px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🏝️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Tropical elegance meets serious storm protection. Permanently installed at an angle above windows for continuous shade and architectural interest. Simply lower and secure when weather threatens while enjoying energy savings year-round.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button" style="font-size: 0.9rem; padding: 12px 25px;">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🏛️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Timeless architectural charm with modern protection. Hinged shutters that swing closed during storms. Available in numerous colors and louver configurations to enhance your home's character while delivering reliable protection.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button" style="font-size: 0.9rem; padding: 12px 25px;">Learn More</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View Complete Product Line</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA Section -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>What's Next</h2>
+            <p>Don't wait until the next hurricane warning to protect your Immokalee home and family. Schedule your complimentary in-home consultation today and discover which hurricane shutter solution best suits your needs and budget. Our experienced representatives will assess your property, explain your options, and provide a detailed quote with no obligation.</p>
+            <a href="tel:8886859680" class="phone" style="display: block; margin: 30px 0;">📞 (888) 685-9680</a>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+            <p style="margin-top: 30px; font-size: 1rem;">When storms threaten Southwest Florida, you'll have the confidence that comes with Storm Smart protection.</p>
+        </div>
+    </div>
+</body>
+</html>

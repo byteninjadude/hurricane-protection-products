@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Gibsonton, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #C8102E;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #C8102E;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn {
+            background: #C8102E;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #A00D25;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #C8102E;
+            border: 2px solid #C8102E;
+        }
+
+        .btn-secondary:hover {
+            background: #C8102E;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C8102E 0%, #A00D25 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        .about {
+            background: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #C8102E;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #C8102E;
+            margin-bottom: 3rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-card h3 {
+            color: #C8102E;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 a {
+            color: #C8102E;
+            text-decoration: none;
+        }
+
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .product-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C8102E;
+            font-weight: bold;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: #C8102E;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .phone {
+                font-size: 1.1rem;
+            }
+
+            .header-content {
+                justify-content: center;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Trust Elements */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .badge-icon {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Storm Smart</div>
+            <div class="header-cta">
+                <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Gibsonton, FL</h1>
+            <p>Protect Your Home & Family with Florida's Leading Hurricane Protection Specialists</p>
+            <div class="hero-cta">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="btn btn-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Florida's Premier Hurricane Protection Provider</h2>
+                <p>Storm Smart is Florida's leading manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows. Based right here in Florida, we understand the unique challenges that Gibsonton residents face during hurricane season. Our team is committed to providing reliable, durable protection solutions that safeguard both families and property when severe weather strikes.</p>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <span class="badge-icon">🏆</span>
+                        <span>Florida-Based</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">⭐</span>
+                        <span>Expert Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            <div class="product-grid">
+                <!-- Accordion Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" target="_blank">Accordion Hurricane Shutters</a></h3>
+                    <p>One of the most convenient and cost-effective protection solutions available.</p>
+                    <ul>
+                        <li>Quick and easy deployment</li>
+                        <li>Interlocking design for maximum protection</li>
+                        <li>Folds neatly when not in use</li>
+                        <li>Durable aluminum construction</li>
+                        <li>Minimal maintenance required</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="btn">Learn More</a>
+                </div>
+
+                <!-- Rolling Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" target="_blank">Aluminum Rolling Shutters</a></h3>
+                    <p>Ultimate convenience with automated protection at the touch of a button.</p>
+                    <ul>
+                        <li>Motorized operation</li>
+                        <li>Complete coverage and maximum protection</li>
+                        <li>Enhanced security features</li>
+                        <li>Noise reduction benefits</li>
+                        <li>Energy efficient</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="btn">Learn More</a>
+                </div>
+
+                <!-- Bahama Shutters -->
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" target="_blank">Bahama Shutters</a></h3>
+                    <p>Tropical elegance meets serious storm protection.</p>
+                    <ul>
+                        <li>Year-round beauty and functionality</li>
+                        <li>Continuous shade and ventilation</li>
+                        <li>Quick storm deployment</li>
+                        <li>Enhances curb appeal</li>
+                        <li>Available in multiple colors</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="btn">Learn More</a>
+                </div>
+
+                <!-- Colonial Shutters -->
+                <div class="product-card">
+                    <h3>Colonial Shutters</h3>
+                    <p>Timeless charm with dependable hurricane protection.</p>
+                    <ul>
+                        <li>Classic architectural style</li>
+                        <li>Hinged design for easy operation</li>
+                        <li>Increases home value</li>
+                        <li>Year-round aesthetic appeal</li>
+                        <li>Long-lasting durability</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane season to protect your Gibsonton home and family. Our experienced team is ready to assess your specific needs and provide expert recommendations.</p>
+            <div class="hero-cta">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="btn btn-secondary">Schedule Your Free In-Home Visit</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1.3rem;">
+                <strong>Call us now at <a href="tel:8886859680" style="color: white; text-decoration: underline;">(888) 685-9680</a></strong>
+            </p>
+            <p style="margin-top: 1rem;">Or fill out the form on our website to get started today!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Storm Smart</strong> - Florida's Hurricane Protection Experts</p>
+            <p>Serving Gibsonton, FL and surrounding areas</p>
+            <p>© 2024 Storm Smart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

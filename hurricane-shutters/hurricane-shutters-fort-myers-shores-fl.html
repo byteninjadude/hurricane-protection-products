@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Fort Myers Shores, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1538 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .phone a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .phone a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(196, 30, 58, 0.9), rgba(139, 21, 56, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C41E3A;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: #C41E3A;
+        }
+
+        .intro {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .products {
+            background: #f5f5f5;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #C41E3A;
+            margin-bottom: 3rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-card h3 {
+            color: #C41E3A;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 a {
+            color: #C41E3A;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .product-card h3 a:hover {
+            color: #8B1538;
+        }
+
+        .product-card p {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            color: #C41E3A;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1538 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .footer {
+            background: #222;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .phone {
+                font-size: 1.1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        .trust-badge {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #C41E3A;
+        }
+
+        .trust-item .label {
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <div class="phone">
+                    📞 <a href="tel:8886859680">(888) 685-9680</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Fort Myers Shores, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Products</a>
+            <a href="tel:8886859680" class="cta-button secondary">Call Now: (888) 685-9680</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <div class="intro-text">
+                <p><strong>Storm Smart is Florida's premier manufacturer and installer of comprehensive hurricane protection products.</strong> We specialize in high-quality screens, shutters, doors, and windows designed to safeguard your property against hurricanes, tropical storms, and severe weather. Serving homeowners throughout Fort Myers Shores and the greater Southwest Florida region, we provide reliable storm protection solutions that give you peace of mind when severe weather threatens.</p>
+            </div>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <section class="trust-badge">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="number">40+</div>
+                    <div class="label">Years Experience</div>
+                </div>
+                <div class="trust-item">
+                    <div class="number">100%</div>
+                    <div class="label">Florida Made</div>
+                </div>
+                <div class="trust-item">
+                    <div class="number">★★★★★</div>
+                    <div class="label">Customer Rated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The most popular storm protection solution for Fort Myers Shores residents, combining convenience with reliability.</p>
+                    <ul class="benefits">
+                        <li>Quick and easy deployment</li>
+                        <li>Permanently installed - always ready</li>
+                        <li>Heavy-duty aluminum construction</li>
+                        <li>Exceeds Florida building codes</li>
+                        <li>Compact storage when not in use</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>Premium motorized protection that operates at the touch of a button for ultimate convenience.</p>
+                    <ul class="benefits">
+                        <li>Motorized operation - effortless</li>
+                        <li>Enhanced home security</li>
+                        <li>Energy efficiency benefits</li>
+                        <li>Sleek, modern design</li>
+                        <li>Year-round noise reduction</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Tropical charm meets robust protection with these stylish hinged shutters.</p>
+                    <ul class="benefits">
+                        <li>Beautiful coastal aesthetic</li>
+                        <li>Continuous shade and privacy</li>
+                        <li>Quick storm deployment</li>
+                        <li>Multiple color options</li>
+                        <li>Energy savings from shading</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Traditional elegance with modern engineering for superior hurricane resistance.</p>
+                    <ul class="benefits">
+                        <li>Classic architectural charm</li>
+                        <li>Decorative and functional</li>
+                        <li>Versatile design options</li>
+                        <li>Enhances curb appeal</li>
+                        <li>Side-hinged operation</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button">Learn More</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View All Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait for the next hurricane warning to protect your Fort Myers Shores home and family. Take action today and discover which hurricane shutter solution best suits your home's needs and budget.</p>
+            
+            <div class="contact-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button secondary">Call (888) 685-9680</a>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 1.1rem;">
+                Visit our website or call us directly to schedule your complimentary in-home consultation. Our experienced representatives will assess your property, discuss your protection goals, and provide a detailed quote for professional installation.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Provider.</p>
+            <p style="margin-top: 10px;">Serving Fort Myers Shores and Southwest Florida</p>
+        </div>
+    </footer>
+</body>
+</html>

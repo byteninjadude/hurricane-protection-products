@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Parkland, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .phone:hover {
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.95) 0%, rgba(139, 0, 0, 0.95) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/><path fill="%23444" d="M0 400 Q300 200 600 400 T1200 400 V800 H0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C41E3A;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f8f8f8;
+        }
+
+        .cta-button-red {
+            background: #C41E3A;
+            color: white;
+        }
+
+        .cta-button-red:hover {
+            background: #8B0000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .products {
+            background: #f9f9f9;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #C41E3A;
+            margin-bottom: 60px;
+            font-weight: bold;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 5px solid #C41E3A;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.2);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .product-content {
+            padding: 30px;
+        }
+
+        .product-content ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .product-content li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .product-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C41E3A;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .product-link {
+            display: block;
+            text-align: center;
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            transition: all 0.3s;
+        }
+
+        .product-link:hover {
+            background: #C41E3A;
+            color: white;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .trust-badges {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            text-align: center;
+        }
+
+        .badge-icon {
+            width: 60px;
+            height: 60px;
+            background: #C41E3A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .badge p {
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .phone {
+                font-size: 1.1rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Hurricane Shutters in Parkland, FL</h1>
+        <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View Our Shutters</a>
+        <a href="tel:8886859680" class="cta-button cta-button-red">Call Now: (888) 685-9680</a>
+    </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's leading manufacturer and installer of comprehensive hurricane protection solutions. We specialize in designing, manufacturing, and installing premium hurricane screens, shutters, doors, and windows throughout Florida, with dedicated service to Parkland and surrounding communities. Our mission is to provide homeowners and businesses with reliable, durable protection against severe weather while enhancing property value and aesthetic appeal.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="trust-badges">
+        <div class="container">
+            <h2 style="color: #C41E3A; margin-bottom: 10px;">Why Choose Storm Smart?</h2>
+            <div class="badges">
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <p>Florida's #1<br>Hurricane Protection</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <p>Certified &<br>Code Compliant</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">💰</div>
+                    <p>Insurance<br>Discounts Available</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⚡</div>
+                    <p>Fast Professional<br>Installation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>Accordion Hurricane Shutters</h3>
+                    </div>
+                    <div class="product-content">
+                        <ul>
+                            <li>Easy one-person operation</li>
+                            <li>Permanently installed - no storage needed</li>
+                            <li>Deploys in minutes</li>
+                            <li>Cost-effective protection</li>
+                            <li>Insurance premium discounts</li>
+                            <li>Durable aluminum construction</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>Aluminum Rolling Shutters</h3>
+                    </div>
+                    <div class="product-content">
+                        <ul>
+                            <li>Motorized convenience</li>
+                            <li>Remote or smartphone control</li>
+                            <li>Enhanced security & privacy</li>
+                            <li>Energy savings year-round</li>
+                            <li>Perfect for multi-story homes</li>
+                            <li>Premium protection solution</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>Bahama Shutters</h3>
+                    </div>
+                    <div class="product-content">
+                        <ul>
+                            <li>Tropical Caribbean aesthetic</li>
+                            <li>Provides shade & ventilation</li>
+                            <li>Reduces cooling costs</li>
+                            <li>Quick storm deployment</li>
+                            <li>Increases curb appeal</li>
+                            <li>Design meets function</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>Colonial Shutters</h3>
+                    </div>
+                    <div class="product-content">
+                        <ul>
+                            <li>Classic elegant design</li>
+                            <li>Side-hinged operation</li>
+                            <li>Complements any architecture</li>
+                            <li>Privacy & light control</li>
+                            <li>Enhances property value</li>
+                            <li>Traditional beauty, modern strength</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red">Explore All Shutter Options</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane season to protect your Parkland home and family. Take the first step toward comprehensive storm protection today. Our experienced team is ready to provide you with a free, no-obligation in-home consultation where we'll assess your property's specific needs and recommend the ideal protection solution for your budget and lifestyle.</p>
+            
+            <div class="contact-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Visit</a>
+                <a href="tel:8886859680" class="cta-button">Call (888) 685-9680</a>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 1.1rem;">Our certified specialists will visit your home at a time that works for you, provide detailed measurements, and offer a comprehensive proposal tailored to your property's unique requirements. Protect your investment and ensure your peace of mind with Storm Smart's proven hurricane protection solutions.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Storm Smart. Florida's Trusted Hurricane Protection Experts.</p>
+        <p style="margin-top: 10px;">Serving Parkland and all of South Florida</p>
+    </footer>
+</body>
+</html>

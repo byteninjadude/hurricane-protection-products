@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in St. Petersburg, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .cta-button.secondary:hover {
+            background: white;
+            color: #c41e3a;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-bar {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid #c41e3a;
+            border-bottom: 4px solid #c41e3a;
+        }
+        
+        .products-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+            color: #c41e3a;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #c41e3a;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(196,30,58,0.2);
+        }
+        
+        .product-card h3 {
+            color: #c41e3a;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 a {
+            color: #c41e3a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .product-card h3 a:hover {
+            color: #8b1429;
+        }
+        
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .product-link {
+            color: #c41e3a;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-link:hover {
+            color: #8b1429;
+            transform: translateX(5px);
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .phone-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .phone-number a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-number {
+                font-size: 24px;
+            }
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">STORM SMART</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in St. Petersburg, FL</h1>
+            <p>Trusted hurricane protection for St. Petersburg homes and businesses</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Shutters</a>
+            <a href="tel:8886859680" class="cta-button secondary">Call (888) 685-9680</a>
+        </div>
+    </section>
+    
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's trusted leader in hurricane protection, specializing in the manufacturing and installation of premium storm protection products including hurricane screens, shutters, impact doors, and storm-resistant windows. We proudly serve homeowners and businesses throughout St. Petersburg and the greater Florida region, providing comprehensive storm protection solutions that safeguard properties against the destructive forces of hurricanes and severe weather.</p>
+        </div>
+    </section>
+    
+    <section class="cta-bar">
+        <div class="container">
+            <h2 style="margin-bottom: 20px; color: #c41e3a;">Ready to protect your St. Petersburg home?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Visit stormsmart.com/aluminum-shutters to explore products and schedule a complimentary in-home consultation</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Started Now</a>
+        </div>
+    </section>
+    
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>Accordion hurricane shutters offer St. Petersburg homeowners the perfect combination of convenience, security, and storm protection. These permanently installed shutters fold away neatly when not in use, virtually disappearing into compact housing units on either side of your windows and doors.</p>
+                    <ul class="benefits-list">
+                        <li>Quick pull-and-lock deployment</li>
+                        <li>Permanently installed, no storage needed</li>
+                        <li>Heavy-duty extruded aluminum construction</li>
+                        <li>Meets strict Florida building codes</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>Aluminum rolling shutters represent the ultimate in automated hurricane protection for discerning St. Petersburg homeowners. These premium shutters operate at the touch of a button, rolling up and down from a compact housing unit installed above each protected opening.</p>
+                    <ul class="benefits-list">
+                        <li>Electric and manual configurations available</li>
+                        <li>Year-round security and privacy</li>
+                        <li>Energy efficiency and noise reduction</li>
+                        <li>Sleek design for any architecture</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bahama shutters bring both tropical elegance and reliable hurricane protection to St. Petersburg homes. These attractive shutters mount above windows and doors at a permanent angle, providing continuous shade and architectural appeal while remaining ready for instant storm deployment.</p>
+                    <ul class="benefits-list">
+                        <li>Fast fold-down storm protection</li>
+                        <li>Year-round shade and UV control</li>
+                        <li>Caribbean-inspired curb appeal</li>
+                        <li>Available in multiple colors and styles</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Colonial shutters deliver timeless architectural beauty alongside robust hurricane protection for St. Petersburg's traditional and contemporary homes alike. These hinged shutters mount on either side of windows and doors, creating an elegant frame during calm weather.</p>
+                    <ul class="benefits-list">
+                        <li>Classic side-hinged look</li>
+                        <li>Premium aluminum with authentic detailing</li>
+                        <li>Low maintenance and durable</li>
+                        <li>Code-compliant storm protection</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait for the next hurricane season to protect your St. Petersburg home and family. Visit stormsmart.com/aluminum-shutters to explore our complete range of hurricane shutter solutions and schedule your free, no-obligation in-home consultation.</p>
+            <div class="phone-number">
+                <a href="tel:8886859680">📞 (888) 685-9680</a>
+            </div>
+            <p style="margin: 30px 0;">Our certified storm protection experts will assess your property's specific needs and recommend the ideal system for your budget.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Storm Smart. Florida's Leading Hurricane Protection Specialist.</p>
+        </div>
+    </footer>
+</body>
+</html>

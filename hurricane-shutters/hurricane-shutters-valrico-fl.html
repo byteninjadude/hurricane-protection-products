@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Valrico, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .cta-button.secondary:hover {
+            background: white;
+            color: #c41e3a;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-bar {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid #c41e3a;
+            border-bottom: 4px solid #c41e3a;
+        }
+        
+        .products-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+            color: #c41e3a;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #c41e3a;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(196,30,58,0.2);
+        }
+        
+        .product-card h3 {
+            color: #c41e3a;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 a {
+            color: #c41e3a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .product-card h3 a:hover {
+            color: #8b1429;
+        }
+        
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .product-link {
+            color: #c41e3a;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-link:hover {
+            color: #8b1429;
+            transform: translateX(5px);
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1429 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .phone-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .phone-number a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-number {
+                font-size: 24px;
+            }
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">STORM SMART</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Valrico, FL</h1>
+            <p>Florida’s most trusted hurricane protection for Valrico homeowners</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Shutters</a>
+            <a href="tel:8886859680" class="cta-button secondary">Call (888) 685-9680</a>
+        </div>
+    </section>
+    
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based in the heart of hurricane-prone Florida, we understand the unique challenges that Valrico residents face during storm season, and we're committed to providing comprehensive protection solutions that keep your family and property safe when it matters most.</p>
+        </div>
+    </section>
+    
+    <section class="cta-bar">
+        <div class="container">
+            <h2 style="margin-bottom: 20px; color: #c41e3a;">Ready to protect your home?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Visit our aluminum shutters page to explore our full range and schedule your in-home consultation</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Started Now</a>
+        </div>
+    </section>
+    
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>Accordion hurricane shutters are one of the most popular and practical storm protection solutions for Valrico homeowners. These shutters fold compactly against your home's exterior when not in use, maintaining curb appeal while providing instant protection when storms approach.</p>
+                    <ul class="benefits-list">
+                        <li>Durable aluminum, track-based system</li>
+                        <li>Deployable by one person in minutes</li>
+                        <li>Interlocking design resists wind and debris</li>
+                        <li>Year-round security and privacy benefits</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>Aluminum rolling shutters represent the ultimate in convenience and protection for discerning Valrico homeowners. Permanently installed above windows and doors, they roll into compact housings that blend with your architecture.</p>
+                    <ul class="benefits-list">
+                        <li>Motorized, push-button deployment</li>
+                        <li>Complete coverage for multi-story homes</li>
+                        <li>Energy efficiency and heat reduction</li>
+                        <li>Security, noise reduction, and privacy</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bahama shutters bring tropical charm and practical hurricane protection together for Valrico homes. Hinged at the top and propped open, they provide continuous shade, ventilation, and better curb appeal.</p>
+                    <ul class="benefits-list">
+                        <li>Fast, secure storm lockdown</li>
+                        <li>Ongoing shade and energy savings</li>
+                        <li>Natural ventilation even when closed</li>
+                        <li>Multiple colors and coastal styles</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Colonial shutters offer timeless elegance with modern hurricane protection for Valrico homeowners who want classic architectural detail. Side-hinged panels fold back daily and close securely for storms.</p>
+                    <ul class="benefits-list">
+                        <li>Authentic, traditional curb appeal</li>
+                        <li>Solid aluminum, powder-coated finishes</li>
+                        <li>Resists fading and corrosion in Florida climate</li>
+                        <li>Ideal for colonial or historic-style homes</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait for the next hurricane warning to protect your Valrico home and family. Visit our aluminum shutters page today to explore our complete selection of hurricane protection products and find the right solution for your budget.</p>
+            <div class="phone-number">
+                <a href="tel:8886859680">📞 (888) 685-9680</a>
+            </div>
+            <p style="margin: 30px 0;">Schedule your free in-home consultation and get a detailed quote for professional installation from Florida's most trusted name in storm protection.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Storm Smart. Florida's Leading Hurricane Protection Specialist.</p>
+        </div>
+    </footer>
+</body>
+</html>

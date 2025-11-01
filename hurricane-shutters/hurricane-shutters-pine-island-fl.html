@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Pine Island, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #C41E3A;
+        }
+        
+        .header-phone {
+            color: #C41E3A;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #C41E3A;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button-secondary {
+            background: #C41E3A;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-button-secondary:hover {
+            background: #8B1528;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #f8f8f8;
+        }
+        
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            color: #C41E3A;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(196,30,58,0.2);
+        }
+        
+        .product-card h3 {
+            font-size: 32px;
+            color: #C41E3A;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 a {
+            color: #C41E3A;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .product-card h3 a:hover {
+            border-bottom-color: #C41E3A;
+        }
+        
+        .product-card p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .benefits {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .benefits h4 {
+            color: #C41E3A;
+            margin-bottom: 10px;
+        }
+        
+        .benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .benefits li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+        }
+        
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C41E3A;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .product-card h3 {
+                font-size: 24px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+            
+            .header-phone {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Protect Your Pine Island Home with Hurricane Shutters</h1>
+            <p>Florida's Leading Hurricane Protection Experts - Serving Pine Island & Southwest Florida</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Visit</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. We serve homeowners throughout Pine Island and the greater Southwest Florida region, providing comprehensive storm protection solutions backed by decades of experience and local expertise.</p>
+            <div style="text-align: center;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button" style="background: #C41E3A; color: white;">Explore Our Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+
+            <!-- Accordion Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                <p>Accordion hurricane shutters offer the perfect combination of convenience and protection for Pine Island homeowners. These permanently installed shutters fold neatly against your home's exterior when not in use, maintaining your property's aesthetic appeal while providing instant storm protection when needed.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Quick and easy deployment - simply unfold and lock</li>
+                        <li>Permanently installed for instant availability</li>
+                        <li>Heavy-duty aluminum construction meets Florida Building Code</li>
+                        <li>Minimal storage requirements</li>
+                        <li>Ideal for frequently used windows and sliding glass doors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rolling Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                <p>For the ultimate in convenience and protection, aluminum rolling shutters represent the premium choice for Pine Island residents. These motorized shutters roll up into a compact housing box above your windows, remaining completely hidden when not deployed.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Motorized operation - push-button convenience</li>
+                        <li>Completely hidden when not in use</li>
+                        <li>Perfect for multi-story homes and hard-to-reach windows</li>
+                        <li>Superior impact resistance</li>
+                        <li>Battery backup systems available for power outages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bahama Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                <p>Bahama shutters bring tropical elegance to storm protection, making them a popular choice among Pine Island homeowners who want year-round aesthetic appeal. These top-hinged shutters mount above your windows and provide shade, privacy, and ventilation while adding distinctive architectural character.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Year-round aesthetic appeal and curb appeal</li>
+                        <li>Provides shade and reduces cooling costs</li>
+                        <li>Quick fold-down storm protection</li>
+                        <li>Available in multiple colors and styles</li>
+                        <li>Louvered design allows airflow and natural light</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Colonial Shutters -->
+            <div class="product-card">
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                <p>Colonial shutters offer timeless architectural appeal while delivering robust storm protection for your Pine Island home. These side-hinged shutters mount beside your windows and swing closed to meet in the middle, creating a classic look that complements traditional home designs.</p>
+                <div class="benefits">
+                    <h4>Key Benefits:</h4>
+                    <ul>
+                        <li>Timeless architectural elegance</li>
+                        <li>Increases property value and curb appeal</li>
+                        <li>Available in solid panel or louvered styles</li>
+                        <li>Customizable colors to match your home</li>
+                        <li>Easy operation with secure locking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your Pine Island home and family. Take action today and schedule your complimentary in-home consultation with our experienced representatives.</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Visit Online</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 18px;">Our team will assess your home's specific needs and provide you with a detailed proposal for the hurricane protection system that's right for you. Protect your investment and ensure your peace of mind with Storm Smart's proven hurricane shutters.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Experts.</p>
+            <p>Serving Pine Island and Southwest Florida</p>
+        </div>
+    </footer>
+</body>
+</html>

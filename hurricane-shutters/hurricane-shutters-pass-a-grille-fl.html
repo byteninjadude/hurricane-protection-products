@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Pass-A-Grille, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #DC143C;
+        }
+        
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #DC143C;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #DC143C 0%, #A01028 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #DC143C;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button-secondary {
+            background: #DC143C;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .intro-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .intro-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .cta-bar {
+            background: #f8f8f8;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #DC143C;
+            border-bottom: 3px solid #DC143C;
+        }
+        
+        .products-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: #DC143C;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(220, 20, 60, 0.2);
+            border-color: #DC143C;
+        }
+        
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 {
+            color: #DC143C;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 a {
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .learn-more {
+            display: inline-block;
+            color: #DC143C;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #DC143C;
+            transition: all 0.3s ease;
+        }
+        
+        .learn-more:hover {
+            color: #A01028;
+            border-color: #A01028;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #DC143C 0%, #A01028 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            color: #DC143C;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .phone {
+                font-size: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">⚡ STORM SMART</div>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Pass-A-Grille, FL</h1>
+            <p>Protect Your Home with Florida's Leading Hurricane Protection Experts</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows that safeguard homes and businesses throughout the Sunshine State. With decades of experience serving communities like Pass-A-Grille, we understand the unique challenges that Florida's coastal weather presents and provide expertly engineered solutions designed to withstand the most severe storm conditions while enhancing your property's value and curb appeal.</p>
+    </section>
+
+    <div class="cta-bar">
+        <h3 style="margin-bottom: 1rem; color: #DC143C;">Ready to Protect Your Home?</h3>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+    </div>
+
+    <section class="products-section">
+        <h2 class="section-title">Our Hurricane Protection Solutions</h2>
+        
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">🏆</div>
+                <h3>Florida Certified</h3>
+                <p>Meets all FL building codes</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Installation</h3>
+                <p>Professional service</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💪</div>
+                <h3>Built to Last</h3>
+                <p>Premium materials</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <h3>Storm Tested</h3>
+                <p>Category 5 rated</p>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">🪗</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                <p>The perfect combination of convenience and durability. These shutters fold neatly to the sides when not in use and deploy quickly with track-mounted ease. Heavy-duty aluminum construction provides exceptional wind resistance and impact protection.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🎬</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                <p>Ultimate protection technology with year-round functionality. Roll up completely into a compact housing when not needed. Available in motorized options for push-button convenience. Category 5 hurricane rated with insulating properties.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🌴</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                <p>Distinctive tropical aesthetic meets reliable protection. Top-hinged shutters provide continuous shade and reduce cooling costs year-round. Quick deployment creates solid protection against high winds and debris. Available in multiple colors.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🏛️</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                <p>Timeless architectural elegance with modern storm protection. Side-hinged shutters enhance curb appeal while providing robust hurricane defense. Reinforced aluminum construction meets all Florida building codes. Perfect for traditional or modern homes.</p>
+                <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane season to protect your Pass-A-Grille home and family. Get your free in-home consultation today and discover which hurricane protection solution is right for you.</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Experts.</p>
+        <p>Serving Pass-A-Grille and all of Florida</p>
+    </footer>
+</body>
+</html>

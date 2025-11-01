@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Lakewood Ranch, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-red {
+            background: #c41e3a;
+            color: white;
+        }
+
+        .cta-button-red:hover {
+            background: #a01830;
+        }
+
+        .phone {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 10px;
+            border: 3px solid white;
+        }
+
+        .intro-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+
+        .products {
+            padding: 80px 20px;
+            background: #f8f8f8;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #c41e3a;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(196, 30, 58, 0.2);
+        }
+
+        .product-card h3 {
+            color: #c41e3a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 a {
+            color: #c41e3a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .product-card h3 a:hover {
+            color: #8b0000;
+        }
+
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .benefits {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .benefits li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .trust-bar {
+            background: #8b0000;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .product-card {
+                padding: 30px 20px;
+            }
+
+            .cta-button, .phone {
+                font-size: 1rem;
+                padding: 14px 28px;
+            }
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Lakewood Ranch, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <div>
+                <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="trust-bar">
+        🛡️ Florida's Leading Hurricane Protection Manufacturer & Installer | Serving Lakewood Ranch & Beyond
+    </div>
+
+    <section class="intro-section">
+        <div class="container">
+            <p>
+                When hurricane season arrives in Florida, Lakewood Ranch residents need reliable protection they can count on. <strong>Storm Smart</strong> is a leading Florida-based manufacturer and installer specializing in premium hurricane protection products, including screens, shutters, doors, and windows. We serve communities throughout the Sunshine State, providing homeowners and businesses with the peace of mind that comes from knowing their property is protected against severe weather conditions.
+            </p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-red">Explore Our Hurricane Shutters →</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="icon">🪟</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect blend of convenience and protection for Lakewood Ranch homeowners. These shutters fold neatly to the sides when not in use, preserving your home's aesthetic appeal.</p>
+                    <ul class="benefits">
+                        <li>Quick deployment when storms approach</li>
+                        <li>Permanent installation - no storage needed</li>
+                        <li>Durable aluminum construction</li>
+                        <li>Easy to operate for any family member</li>
+                        <li>Excellent wind resistance & impact protection</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon">⚙️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The ultimate in convenience and security. These motorized shutters roll up into a compact housing, remaining completely hidden when not deployed.</p>
+                    <ul class="benefits">
+                        <li>Push-button motorized operation</li>
+                        <li>Sleek design integrates seamlessly</li>
+                        <li>Year-round insulation benefits</li>
+                        <li>Protection against storms & intrusions</li>
+                        <li>Ideal for luxury homes & commercial properties</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon">🌴</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bring tropical elegance to your Lakewood Ranch home while delivering serious storm protection. Hinged at the top, they prop outward to create attractive overhangs.</p>
+                    <ul class="benefits">
+                        <li>Classic Caribbean styling</li>
+                        <li>Excellent sun control & UV protection</li>
+                        <li>Reduces cooling costs year-round</li>
+                        <li>Enhances curb appeal dramatically</li>
+                        <li>Easy deployment for storm protection</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon">🏛️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Combine timeless American architectural charm with modern hurricane protection technology. Traditional styling meets high-strength aluminum engineering.</p>
+                    <ul class="benefits">
+                        <li>Classic colonial-era appearance</li>
+                        <li>Meets current building codes & wind requirements</li>
+                        <li>Enhances property value</li>
+                        <li>Available in various colors & configurations</li>
+                        <li>Perfect for traditional neighborhoods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>
+                Don't wait until the next hurricane warning to protect your Lakewood Ranch home. Take action today and schedule your complimentary in-home consultation. Our experienced representatives will assess your property's specific needs and provide you with a detailed proposal tailored to your home and budget.
+            </p>
+            <p>
+                <strong>Protect your family, your property, and your peace of mind with Storm Smart's proven hurricane protection systems.</strong>
+            </p>
+            <div class="contact-options">
+                <a href="tel:8886859680" class="phone">📞 Call (888) 685-9680</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Visit →</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

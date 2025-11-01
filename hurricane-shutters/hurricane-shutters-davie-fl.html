@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Davie, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: #DC143C;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .phone {
+            font-size: 1.5rem;
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #DC143C 0%, #A00C2C 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #DC143C;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .intro {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
+        .products {
+            background: #f8f8f8;
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #DC143C;
+            margin-bottom: 3rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.2);
+        }
+        
+        .product-card h3 {
+            color: #DC143C;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 a {
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .benefits {
+            margin-top: 1rem;
+            padding-left: 20px;
+        }
+        
+        .benefits li {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #DC143C 0%, #A00C2C 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .phone-cta {
+            background: white;
+            color: #DC143C;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .phone-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .badge {
+            text-align: center;
+        }
+        
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-text {
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Storm Smart</div>
+            <div class="phone">📞 (888) 685-9680</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Davie, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based right here in the heart of Florida, we understand the unique challenges that residents face during hurricane season, and we're committed to providing Davie homeowners and businesses with the most reliable and effective storm protection solutions available.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect combination of convenience and protection. These permanently installed shutters fold neatly to the sides when not in use, maintaining your home's aesthetic appeal while remaining readily accessible when storms approach.</p>
+                    <ul class="benefits">
+                        <li>✓ Easy one-person deployment</li>
+                        <li>✓ Interlocking design for maximum strength</li>
+                        <li>✓ Minimal maintenance required</li>
+                        <li>✓ Cost-effective protection</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The ultimate in storm protection technology and convenience. These shutters roll up and down smoothly within housing boxes, offering complete protection when deployed and remaining virtually invisible when retracted.</p>
+                    <ul class="benefits">
+                        <li>✓ Manual or motorized options</li>
+                        <li>✓ Enhanced privacy and security</li>
+                        <li>✓ Energy savings year-round</li>
+                        <li>✓ Sleek, customizable design</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bring tropical charm and serious storm protection to your Davie home. Permanently mounted above windows, these shutters angle outward to provide shade and style while quickly folding down for hurricane protection.</p>
+                    <ul class="benefits">
+                        <li>✓ Caribbean-inspired aesthetic</li>
+                        <li>✓ Increases property value</li>
+                        <li>✓ Reduces cooling costs</li>
+                        <li>✓ Blocks UV rays year-round</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Timeless elegance combined with modern hurricane protection. These shutters maintain classic colonial style while incorporating advanced engineering to meet or exceed current hurricane building codes.</p>
+                    <ul class="benefits">
+                        <li>✓ Classic architectural charm</li>
+                        <li>✓ Boosts curb appeal</li>
+                        <li>✓ Hinged for easy deployment</li>
+                        <li>✓ Corrosion-resistant finish</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your most valuable investment. Take action today and let our experienced team provide you with a complimentary in-home consultation to assess your property's specific needs and recommend the best shutter system for your home and budget.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+                <a href="tel:8886859680" class="phone-cta">📞 Call (888) 685-9680</a>
+            </div>
+
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-text">Florida's Leading<br>Manufacturer</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div class="badge-text">Hurricane-Rated<br>Protection</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-text">Expert<br>Installation</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">💯</div>
+                    <div class="badge-text">Satisfaction<br>Guaranteed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

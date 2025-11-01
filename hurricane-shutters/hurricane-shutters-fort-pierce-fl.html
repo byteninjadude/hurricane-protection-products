@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Fort Pierce, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #c41e3a;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #c41e3a;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: #c41e3a;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: #8b1528;
+        }
+
+        .intro-section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .cta-banner {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            border-top: 4px solid #c41e3a;
+            border-bottom: 4px solid #c41e3a;
+        }
+
+        .products-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(196,30,58,0.15);
+        }
+
+        .product-card h2 {
+            color: #c41e3a;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h2 a {
+            color: #c41e3a;
+            text-decoration: none;
+        }
+
+        .product-card h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .product-card p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .benefits-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #555;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .phone-cta {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 1.5rem;
+            display: block;
+        }
+
+        .phone-cta a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid white;
+        }
+
+        .phone-cta a:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .product-card {
+                padding: 1.5rem;
+            }
+
+            .product-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Fort Pierce, FL</h1>
+            <p>Protect Your Home with Florida's #1 Hurricane Protection Systems</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View Our Shutters</a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <p>
+            Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based in Florida and serving communities throughout the state, including Fort Pierce, we understand the unique challenges that hurricane season brings to local homeowners and are committed to providing superior protection solutions that combine durability, functionality, and aesthetic appeal.
+        </p>
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+        <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #333;"><strong>Ready to Protect Your Fort Pierce Home?</strong></p>
+        <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Consultation</a>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <!-- Accordion Shutters -->
+        <div class="product-card">
+            <h2><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" target="_blank">Accordion Hurricane Shutters</a></h2>
+            <p>
+                Accordion hurricane shutters represent one of the most popular and practical storm protection solutions available to Fort Pierce homeowners. These shutters feature a folding design that allows them to stack compactly against the side of your windows when not in use, maintaining your home's curb appeal during fair weather.
+            </p>
+            <ul class="benefits-list">
+                <li>Quick and easy deployment when storms approach</li>
+                <li>Permanently installed - no seasonal storage needed</li>
+                <li>Locks securely for maximum protection</li>
+                <li>Made from high-grade, corrosion-resistant aluminum</li>
+                <li>Low maintenance and long-lasting durability</li>
+            </ul>
+        </div>
+
+        <!-- Rolling Shutters -->
+        <div class="product-card">
+            <h2><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" target="_blank">Aluminum Rolling Shutters</a></h2>
+            <p>
+                Aluminum rolling shutters offer the ultimate in convenience and protection for Fort Pierce residents who want premium hurricane defense with minimal effort. These shutters roll down smoothly from compact housing boxes above your windows, available with manual or motorized operation.
+            </p>
+            <ul class="benefits-list">
+                <li>Motorized options for effortless operation</li>
+                <li>Enhanced home security year-round</li>
+                <li>Excellent noise reduction capabilities</li>
+                <li>Improved energy efficiency and insulation</li>
+                <li>Sleek, modern design that complements any home</li>
+            </ul>
+        </div>
+
+        <!-- Bahama Shutters -->
+        <div class="product-card">
+            <h2><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" target="_blank">Bahama Shutters</a></h2>
+            <p>
+                Bahama shutters bring a distinctive tropical aesthetic to Fort Pierce homes while delivering reliable hurricane protection. These shutters are permanently mounted above your windows at an angle, creating an attractive awning effect that provides shade and enhances your home's architectural character year-round.
+            </p>
+            <ul class="benefits-list">
+                <li>Beautiful tropical aesthetic that adds curb appeal</li>
+                <li>Provides natural shade and ventilation</li>
+                <li>Reduces cooling costs in Florida's hot climate</li>
+                <li>Always ready for storm season - no installation needed</li>
+                <li>Available in multiple colors to match your home</li>
+            </ul>
+        </div>
+
+        <!-- Colonial Shutters -->
+        <div class="product-card">
+            <h2><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" target="_blank">Colonial Shutters</a></h2>
+            <p>
+                Colonial shutters provide Fort Pierce homeowners with a classic, timeless look that enhances property value while offering dependable storm protection. These shutters feature the traditional appearance of historic colonial-style shutters but are constructed from durable aluminum and engineered to meet modern hurricane protection standards.
+            </p>
+            <ul class="benefits-list">
+                <li>Classic design that increases home value</li>
+                <li>Blends with traditional and contemporary architecture</li>
+                <li>Fully functional hurricane protection</li>
+                <li>Available in numerous custom colors</li>
+                <li>Engineered to meet Florida's strict building codes</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>What's Next</h2>
+            <p>
+                Don't wait until the next hurricane warning to protect your Fort Pierce home and family. Take action now to secure your property with Storm Smart's superior hurricane protection systems.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button cta-button-secondary">View All Products</a>
+            </div>
+            <p class="phone-cta">
+                Call Now: <a href="tel:8886859680">(888) 685-9680</a>
+            </p>
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+                Our experienced team will assess your home's specific needs, provide personalized recommendations, and give you a detailed quote for professional installation.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

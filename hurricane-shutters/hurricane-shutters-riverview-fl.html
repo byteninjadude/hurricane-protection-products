@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Riverview, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: #C8102E;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .header-phone:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #C8102E 0%, #8B0A1F 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C8102E;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: white;
+            color: #C8102E;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .intro-section {
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .badge {
+            text-align: center;
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .badge-text {
+            font-weight: bold;
+            color: #C8102E;
+        }
+
+        .products-section {
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #C8102E;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-header {
+            background: #C8102E;
+            color: white;
+            padding: 25px;
+        }
+
+        .product-header h3 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .product-header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .product-content {
+            padding: 30px;
+        }
+
+        .product-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .product-benefits {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .product-benefits li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .product-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C8102E;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #C8102E 0%, #8B0A1F 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .footer {
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Riverview, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <div>
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Your Free Quote</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <p>
+                Storm Smart is Florida's trusted leader in hurricane protection, specializing in the manufacturing and installation of premium hurricane screens, shutters, doors, and windows throughout the Sunshine State. With decades of experience protecting Florida families and businesses, we understand the unique weather challenges that Riverview residents face during hurricane season and provide comprehensive storm protection solutions tailored to your specific needs.
+            </p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your In-Home Consultation</a>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-text">Florida's #1<br>Hurricane Protection</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⚡</div>
+                    <div class="badge-text">Fast Professional<br>Installation</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div class="badge-text">180+ MPH<br>Wind Rating</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <div class="badge-text">100% Made<br>in Florida</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                </div>
+                <div class="product-content">
+                    <p>The most popular choice for Riverview homeowners seeking convenience, durability, and exceptional value. These permanently mounted shutters fold neatly to the sides when not in use, providing instant storm protection whenever you need it.</p>
+                    <ul class="product-benefits">
+                        <li>Deploy in minutes without heavy lifting or storage needs</li>
+                        <li>Withstands winds exceeding 180 mph</li>
+                        <li>Provides year-round security and privacy</li>
+                        <li>Smooth track system for easy operation</li>
+                        <li>Maintains your home's aesthetic appeal</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                </div>
+                <div class="product-content">
+                    <p>The ultimate in convenience and sophistication. Protect your home at the touch of a button with motorized rolling shutters that offer premium protection and energy efficiency.</p>
+                    <ul class="product-benefits">
+                        <li>Remote control operation - protect your home from anywhere</li>
+                        <li>Compact housing preserves architectural beauty</li>
+                        <li>Reduces energy costs with superior insulation</li>
+                        <li>Blocks harmful UV rays and provides complete privacy</li>
+                        <li>Maximum protection with minimal effort</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                </div>
+                <div class="product-content">
+                    <p>Combine distinctive tropical style with robust hurricane protection. These permanently visible shutters add architectural character while delivering exceptional storm defense and energy savings.</p>
+                    <ul class="product-benefits">
+                        <li>Enhances curb appeal year-round</li>
+                        <li>Provides excellent shade and reduces cooling costs</li>
+                        <li>Easy deployment when storms approach</li>
+                        <li>Protects furnishings from sun damage</li>
+                        <li>Available in multiple colors and custom sizes</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                </div>
+                <div class="product-content">
+                    <p>Timeless elegance meets modern storm protection. Perfect for homes with traditional architecture, these side-hinged shutters enhance beauty while providing dependable hurricane defense.</p>
+                    <ul class="product-benefits">
+                        <li>Increases property value with classic appeal</li>
+                        <li>Reinforced aluminum construction</li>
+                        <li>Meets or exceeds all local building codes</li>
+                        <li>Provides privacy and light control options</li>
+                        <li>Engineered for extreme weather performance</li>
+                    </ul>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>
+                Don't wait until the next hurricane warning to protect your Riverview home and family. Take action today and schedule your free, no-obligation in-home consultation. Our experienced representatives will assess your specific needs, provide detailed product information, and deliver a customized quote that fits your budget and timeline.
+            </p>
+            <div class="cta-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680 Now</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.1rem;">
+                <strong>Protect what matters most – contact Storm Smart today.</strong>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Storm Smart. Florida's Premier Hurricane Protection Company. Serving Riverview and all of Florida.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Estero, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: #fff;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #C41E3A;
+        }
+
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #C41E3A;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 4rem 5% 5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C41E3A;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: #C41E3A;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: #8B1528;
+        }
+
+        .intro-section {
+            padding: 4rem 5%;
+            background: #f8f9fa;
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .products-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #C41E3A;
+            margin-bottom: 3rem;
+        }
+
+        .products-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(196, 30, 58, 0.2);
+        }
+
+        .product-header {
+            background: #C41E3A;
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .product-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .product-body {
+            padding: 1.5rem;
+        }
+
+        .product-body p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-link {
+            display: inline-block;
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #C41E3A;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .product-link:hover {
+            background: #C41E3A;
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #C41E3A 0%, #8B1528 100%);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .phone-highlight {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            color: white;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .header-phone {
+                font-size: 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .phone-highlight {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Estero, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Shutters</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="intro-content">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based in the heart of Florida, we understand the unique challenges that coastal communities like Estero face during hurricane season, and we're dedicated to providing comprehensive storm protection solutions throughout the state.</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                </div>
+                <div class="product-body">
+                    <p>Perfect combination of convenience and protection. These permanently installed shutters fold neatly to the sides when not in use, then quickly unfold and lock into place when storms approach. Ideal for larger openings and sliding glass doors with minimal maintenance required.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                </div>
+                <div class="product-body">
+                    <p>The ultimate in convenience and security. Motorized shutters roll up discreetly into a housing box, hidden from view. Deploy with the push of a button for complete protection against storms, break-ins, and excessive sunlight. Excellent insulation properties reduce energy costs year-round.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                </div>
+                <div class="product-body">
+                    <p>Tropical charm meets serious storm protection. These distinctive angled shutters provide shade and ventilation during fair weather, then close quickly when storms threaten. Perfect for enhancing your home's curb appeal with classic island styling while reducing cooling costs.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Colonial Shutters</h3>
+                </div>
+                <div class="product-body">
+                    <p>Timeless elegance combined with modern storm protection. These hinged shutters mount on either side of windows, adding classic architectural detail. When protection is needed, they swing closed with a strong locking mechanism. Available in various colors to complement your home's design.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your Estero home and family. Take action today and schedule your free in-home consultation. Our experienced representatives will assess your specific needs and recommend the best shutter system for your property.</p>
+            <div class="phone-highlight">📞 (888) 685-9680</div>
+            <p>Call us now or visit our website to fill out the consultation form. With Storm Smart, you're not just buying shutters – you're investing in peace of mind.</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Storm Smart. Florida's Leading Hurricane Protection Provider.</p>
+        <p>Serving Estero and communities throughout Florida</p>
+    </footer>
+</body>
+</html>

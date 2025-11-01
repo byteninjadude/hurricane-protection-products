@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Redington Beach, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-decoration: none;
+        }
+
+        .header-phone:hover {
+            color: #b71c1c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #d32f2f;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button-secondary {
+            background: #d32f2f;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: #b71c1c;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .cta-center {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #d32f2f;
+            margin-bottom: 50px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.2);
+        }
+
+        .product-card h3 {
+            color: #d32f2f;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 a {
+            color: #d32f2f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .product-card h3 a:hover {
+            color: #b71c1c;
+        }
+
+        .product-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .product-link:hover {
+            color: #b71c1c;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: #d32f2f;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 36px;
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .products h2, .final-cta h2 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">
+                    📞 (888) 685-9680
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Redington Beach, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection Systems</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Get Your Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your property from severe weather. Based in the heart of hurricane-prone Florida, we understand the unique challenges that coastal communities like Redington Beach face during storm season, and we're dedicated to providing reliable, durable protection solutions that give homeowners peace of mind when Mother Nature strikes.</p>
+            <div class="cta-center">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Choose Storm Smart?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Florida-Tested Protection</h3>
+                    <p>Exceeds Florida building codes</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Expert Installation</h3>
+                    <p>Professional, certified installers</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💯</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>Premium materials built to last</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>Free Consultation</h3>
+                    <p>In-home assessment & quote</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Hurricane Shutter Solutions</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect blend of convenience and protection. These shutters fold neatly against your windows when not in use, maintaining your home's aesthetic appeal while remaining instantly deployable when storm warnings arise. Easy-to-operate track system allows one person to quickly secure multiple windows.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The ultimate in convenience and security. These premium shutters roll up into a compact housing above your windows, completely disappearing from view. Available in both manual and motorized options for instant protection at the touch of a button. Provides year-round benefits including security and energy savings.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bring tropical elegance to your home while providing robust hurricane protection. These top-hinged shutters remain permanently installed at an angle, offering continuous shade and privacy. When a storm approaches, they can be quickly lowered and secured. Available in various colors to enhance your home's architectural character.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Combine timeless aesthetic appeal with modern hurricane protection technology. These side-hinged shutters frame your windows beautifully during normal weather, adding character and charm. When storm season arrives, they swing closed and lock securely in place. Available in numerous colors and decorative hardware options.</p>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="cta-center">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next</h2>
+            <p>Don't wait for the next hurricane season to protect your Redington Beach home and family. Take action today and schedule your complimentary in-home consultation with one of our knowledgeable representatives who will assess your property's specific needs and recommend the best protection strategy for your situation. With Storm Smart's expert installation and Florida-tested products, you can face storm season with confidence.</p>
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Online Now</a>
+                <a href="tel:8886859680" class="cta-button cta-button-secondary">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Storm Smart. Florida's Leading Hurricane Protection Specialists.</p>
+            <p>Serving Redington Beach and surrounding areas</p>
+        </div>
+    </footer>
+</body>
+</html>

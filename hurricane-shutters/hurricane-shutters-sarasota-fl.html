@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Sarasota, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #C8102E;
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #C8102E;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .header-phone:hover {
+            color: #A00D25;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #C8102E 0%, #A00D25 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C8102E;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f8f8f8;
+        }
+
+        .cta-button-red {
+            background: #C8102E;
+            color: white;
+        }
+
+        .cta-button-red:hover {
+            background: #A00D25;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 60px 20px;
+            background: #f9f9f9;
+        }
+
+        .intro p {
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* CTA Bar */
+        .cta-bar {
+            background: #C8102E;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .cta-bar h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            color: #C8102E;
+            margin-bottom: 60px;
+            font-weight: bold;
+        }
+
+        .product-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .product-card:nth-child(even) .product-content {
+            order: 2;
+        }
+
+        .product-card:nth-child(even) .product-image {
+            order: 1;
+        }
+
+        .product-image {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            height: 350px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: #C8102E;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-content h3 {
+            font-size: 32px;
+            color: #C8102E;
+            margin-bottom: 20px;
+        }
+
+        .product-content h3 a {
+            color: #C8102E;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .product-content h3 a:hover {
+            color: #A00D25;
+            text-decoration: underline;
+        }
+
+        .product-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .benefits {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .benefits h4 {
+            color: #C8102E;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .benefits li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C8102E;
+            font-weight: bold;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #C8102E 0%, #A00D25 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-options {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card:nth-child(even) .product-content,
+            .product-card:nth-child(even) .product-image {
+                order: 0;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .product-content h3 {
+                font-size: 26px;
+            }
+
+            .final-cta h2 {
+                font-size: 32px;
+            }
+
+            .cta-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">⛨ STORM SMART</div>
+            <a href="tel:8886859680" class="header-phone">
+                📞 (888) 685-9680
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Sarasota, FL</h1>
+            <p>Protect Your Home with Florida's Leading Hurricane Protection Solutions</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Your Free In-Home Consultation</a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <p>When hurricane season approaches, Sarasota residents need reliable protection they can count on. <strong>Storm Smart</strong> is Florida's trusted leader in hurricane protection solutions, specializing in the manufacturing and installation of premium hurricane screens, shutters, doors, and windows throughout the Sunshine State. With decades of combined experience and a deep understanding of Florida's unique weather challenges, we provide comprehensive storm protection services that keep your family and property safe when severe weather strikes.</p>
+        </div>
+    </section>
+
+    <!-- CTA Bar -->
+    <section class="cta-bar">
+        <div class="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+
+            <!-- Accordion Shutters -->
+            <div class="product-card">
+                <div class="product-image">🪟</div>
+                <div class="product-content">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>Accordion hurricane shutters offer the perfect blend of convenience and robust protection for Sarasota homeowners. These permanently installed shutters fold neatly to the sides of your windows when not in use, maintaining your home's aesthetic appeal while providing instant access to storm protection.</p>
+                    <div class="benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Quick and easy deployment</li>
+                            <li>No storage space required</li>
+                            <li>Heavy-duty aluminum construction</li>
+                            <li>Excellent impact resistance</li>
+                            <li>User-friendly locking system</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Rolling Shutters -->
+            <div class="product-card">
+                <div class="product-image">🎚️</div>
+                <div class="product-content">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>For homeowners seeking the ultimate in convenience and security, aluminum rolling shutters represent the pinnacle of hurricane protection technology. These shutters roll up into a compact housing above your windows, remaining completely hidden when not in use.</p>
+                    <div class="benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Push-button motorized operation available</li>
+                            <li>Completely hidden when not in use</li>
+                            <li>Enhanced home security</li>
+                            <li>Noise reduction capabilities</li>
+                            <li>Improved energy efficiency</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Bahama Shutters -->
+            <div class="product-card">
+                <div class="product-image">🏝️</div>
+                <div class="product-content">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Bahama shutters bring both tropical charm and serious storm protection to your Sarasota home. Permanently mounted above windows at a 45-degree angle, these shutters provide continuous shade and ventilation while adding distinctive architectural character to your property.</p>
+                    <div class="benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Beautiful tropical aesthetic</li>
+                            <li>Continuous shade and ventilation</li>
+                            <li>Reduces cooling costs</li>
+                            <li>Quick storm deployment</li>
+                            <li>Enhances curb appeal</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Colonial Shutters -->
+            <div class="product-card">
+                <div class="product-image">🏛️</div>
+                <div class="product-content">
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Colonial shutters combine timeless elegance with modern storm protection technology, making them ideal for Sarasota homes with traditional or historic architectural styles. These hinged shutters mount on either side of windows and feature classic raised panels or louver designs.</p>
+                    <div class="benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Classic architectural appeal</li>
+                            <li>Increases home value</li>
+                            <li>Available in multiple colors</li>
+                            <li>Customizable to match your home</li>
+                            <li>Professional-grade protection</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/" class="cta-button cta-button-red">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane is bearing down on Sarasota to protect your most valuable investment. Take action today and schedule your complimentary in-home consultation with our experienced storm protection experts.</p>
+            <div class="cta-options">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Online Now</a>
+                <a href="tel:8886859680" class="cta-button">Call (888) 685-9680</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Provider.</p>
+        </div>
+    </footer>
+</body>
+</html>

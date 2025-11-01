@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Bokeelia, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #DC143C;
+        }
+        
+        .phone {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #DC143C 0%, #A00D2E 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #DC143C;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button-outline {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+            margin-left: 1rem;
+        }
+        
+        .cta-button-outline:hover {
+            background: white;
+            color: #DC143C;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-alt {
+            background: #f8f9fa;
+        }
+        
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+        
+        .intro strong {
+            color: #DC143C;
+        }
+        
+        .cta-banner {
+            background: #DC143C;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .cta-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.2);
+        }
+        
+        .product-card h3 {
+            color: #DC143C;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 a {
+            color: #DC143C;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .product-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .product-card ul li:before {
+            content: "✓";
+            color: #DC143C;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #DC143C 0%, #A00D2E 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .phone {
+                font-size: 1.1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">STORM SMART</div>
+            <a href="tel:8886859680" class="phone">📞 (888) 685-9680</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hurricane Shutters in Bokeelia, FL</h1>
+            <p>Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View Our Shutters</a>
+            <a href="tel:8886859680" class="cta-button cta-button-outline">Call Now</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="intro">
+            <p><strong>Storm Smart</strong> is Florida's trusted leader in hurricane protection solutions, specializing in the manufacturing and installation of premium hurricane screens, shutters, doors, and windows. With deep roots in the Sunshine State, we understand the unique challenges that Florida homeowners face during hurricane season, and we're dedicated to protecting properties throughout <strong>Bokeelia and the surrounding Southwest Florida region</strong> with our industry-leading storm protection products.</p>
+        </div>
+        
+        <div class="cta-banner">
+            <h3>Ready to Safeguard Your Home?</h3>
+            <p style="margin-bottom: 1.5rem;">Explore our complete product line and schedule your complimentary in-home consultation</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <h2 style="text-align: center; font-size: 2.5rem; color: #DC143C; margin-bottom: 3rem;">Our Hurricane Protection Solutions</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">🪟</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                <p>The perfect blend of convenience and robust protection for Bokeelia homeowners.</p>
+                <ul>
+                    <li>Quick deployment by one person</li>
+                    <li>Permanently mounted for instant readiness</li>
+                    <li>Folds neatly when not in use</li>
+                    <li>Impenetrable barrier against winds and debris</li>
+                    <li>Maintains your home's aesthetic appeal</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">⚙️</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                <p>The ultimate in convenience and protection with motorized operation.</p>
+                <ul>
+                    <li>Deploy at the touch of a button</li>
+                    <li>Maximum impact resistance</li>
+                    <li>Enhanced security and privacy</li>
+                    <li>Noise reduction and energy efficiency</li>
+                    <li>Optional smart home integration</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🌴</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                <p>Tropical elegance meets serious storm protection.</p>
+                <ul>
+                    <li>Provides shade during calm weather</li>
+                    <li>Enhances curb appeal year-round</li>
+                    <li>Easy to secure during storms</li>
+                    <li>Available in numerous colors and styles</li>
+                    <li>Architectural beauty with functionality</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">🏛️</div>
+                <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                <p>Timeless architectural beauty with modern hurricane protection.</p>
+                <ul>
+                    <li>Classic charm for your home's exterior</li>
+                    <li>Hinged for easy operation</li>
+                    <li>Solid barrier when secured</li>
+                    <li>Durable aluminum construction</li>
+                    <li>Multiple colors and configurations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore All Products</a>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>What's Next</h2>
+        <p>Don't wait for the next hurricane warning to protect your Bokeelia home and family. Take action today and discover why thousands of Florida homeowners trust Storm Smart with their hurricane protection needs.</p>
+        
+        <div class="contact-options">
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free In-Home Visit</a>
+            <a href="tel:8886859680" class="cta-button cta-button-outline">Call (888) 685-9680</a>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 1.1rem;">Our experienced Storm Smart representatives will assess your property's unique needs and help you choose the perfect hurricane shutter system to keep your home safe and secure for years to come.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Storm Smart. Florida's Leading Hurricane Protection Provider.</p>
+        <p style="margin-top: 0.5rem;">Serving Bokeelia, FL and surrounding areas</p>
+    </footer>
+</body>
+</html>

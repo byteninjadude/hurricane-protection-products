@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shutters in Port St. Lucie, FL - Storm Smart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #C8102E;
+        }
+        
+        .header-phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #C8102E;
+            text-decoration: none;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #C8102E 0%, #8B0A1F 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #C8102E;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 16px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+        
+        .cta-secondary:hover {
+            background: white;
+            color: #C8102E;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cta-bar {
+            background: #C8102E;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .cta-bar h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .products-section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #C8102E, #E63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .product-card h3 {
+            font-size: 1.5rem;
+            color: #C8102E;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h3 a {
+            color: #C8102E;
+            text-decoration: none;
+        }
+        
+        .product-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .product-benefits {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .product-benefits li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .product-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C8102E;
+            font-weight: bold;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .phone-cta {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .phone-cta:hover {
+            color: #C8102E;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .header-phone {
+                font-size: 1rem;
+            }
+            
+            .cta-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">STORM SMART</div>
+                <a href="tel:8886859680" class="header-phone">📞 (888) 685-9680</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hurricane Shutters in Port St. Lucie, FL</h1>
+            <p class="hero-subtitle">Protect Your Home with Florida's Most Trusted Hurricane Protection</p>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free Consultation</a>
+            <a href="tel:8886859680" class="cta-secondary">Call Now</a>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <p>Storm Smart is Florida's premier manufacturer and installer of hurricane protection products, specializing in high-quality screens, shutters, doors, and windows designed to safeguard your home against severe weather. Based in the Sunshine State, we understand the unique challenges that Florida residents face during hurricane season, and we provide comprehensive storm protection solutions throughout Port St. Lucie and the surrounding areas.</p>
+        </div>
+    </section>
+
+    <section class="cta-bar">
+        <div class="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Explore Our Hurricane Shutters</a>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Hurricane Shutter Solutions</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">🪟</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-accordion-shutters/">Accordion Hurricane Shutters</a></h3>
+                    <p>The perfect combination of convenience and protection. These permanently installed shutters fold neatly to the sides when not in use and quickly unfold when storms approach.</p>
+                    <ul class="product-benefits">
+                        <li>Easy one-person operation</li>
+                        <li>No storage space required</li>
+                        <li>Ideal for large openings</li>
+                        <li>Maintains home aesthetics</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">⚙️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/aluminum-rolling-shutters/">Aluminum Rolling Shutters</a></h3>
+                    <p>The pinnacle of convenience with motorized operation. Roll up into compact housing and deploy with the push of a button for ultimate protection.</p>
+                    <ul class="product-benefits">
+                        <li>Push-button motorized operation</li>
+                        <li>Virtually invisible when open</li>
+                        <li>Enhanced security year-round</li>
+                        <li>Energy savings & noise reduction</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🌴</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/bahama-shutters/">Bahama Shutters</a></h3>
+                    <p>Distinctive tropical aesthetic meets exceptional protection. Top-hinged design provides shade, ventilation, and authentic island styling year-round.</p>
+                    <ul class="product-benefits">
+                        <li>Reduces cooling costs</li>
+                        <li>Provides shade & ventilation</li>
+                        <li>Authentic coastal design</li>
+                        <li>Quick storm deployment</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🏛️</div>
+                    <h3><a href="https://www.stormsmart.com/aluminum-shutters/colonial-shutters/">Colonial Shutters</a></h3>
+                    <p>Timeless elegance with modern protection technology. Side-hinged shutters that enhance curb appeal while providing reliable storm defense.</p>
+                    <ul class="product-benefits">
+                        <li>Classic architectural style</li>
+                        <li>Multiple color options</li>
+                        <li>Permanent aesthetic feature</li>
+                        <li>Solid hurricane barrier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">View All Hurricane Shutters</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>What's Next?</h2>
+            <p>Don't wait until the next hurricane warning to protect your Port St. Lucie home. Take action today and schedule your complimentary in-home consultation with our experienced representatives.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://www.stormsmart.com/aluminum-shutters/" class="cta-button">Schedule Free In-Home Visit</a>
+            </div>
+            
+            <a href="tel:8886859680" class="phone-cta">Or Call: (888) 685-9680</a>
+            
+            <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">Our experts will assess your specific needs and provide you with a customized quote for protecting your most valuable investment – your home.</p>
+        </div>
+    </section>
+</body>
+</html>
